@@ -5,18 +5,22 @@ This repository contains an example project for building a private Retrieval-Aug
 ## Prerequisites
 
  * Docker
- * Python, psycopg
+ * Python, [psycopg](https://www.psycopg.org/)
  * [Ollama](https://github.com/ollama/ollama)
  * [PostgreSQL](https://docs.timescale.com/self-hosted/latest/install/installation-docker/), [pgai](https://github.com/timescale/pgai)
 
 ## Docker Setup
 
-* Create a network through which the Ollama and PostgreSQL containers will interact with: `docker network docker network create rag-net`
+* Create a network through which the Ollama and PostgreSQL containers will interact:
 
-* [Ollama](https://hub.docker.com/r/ollama/ollama) docker container: `docker run -d --network rag-net -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama` (Note: `--network` tag to make sure that the container runs on the network defined)
+  `docker network docker network create rag-net`
 
-     * Llama3.2: `docker exec -it ollama ollama pull llama3.2`
-     * Nomic Embed v1.5: `docker exec -it ollama ollama pull nomic-embed-text`
+* [Ollama](https://hub.docker.com/r/ollama/ollama) docker container: (Note: [`--network`](https://docs.docker.com/engine/network/) tag to make sure that the container runs on the network defined)
+
+  `docker run -d --network rag-net -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama` 
+
+     * [Llama3.2](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_2): `docker exec -it ollama ollama pull llama3.2`
+     * [Nomic Embed v1.5](https://www.nomic.ai/blog/posts/nomic-embed-matryoshka?ref=timescale.com): `docker exec -it ollama ollama pull nomic-embed-text`
 
 * [TimescaleDB](https://docs.timescale.com/self-hosted/latest/install/installation-docker/): `docker run -d --network rag-net --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb-ha:pg16`
 
