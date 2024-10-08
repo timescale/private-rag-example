@@ -20,7 +20,7 @@ This repository contains an example project for building a private Retrieval-Aug
 
 * [TimescaleDB](https://docs.timescale.com/self-hosted/latest/install/installation-docker/): `docker run -d --network rag-net --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb-ha:pg16`
 
-     * (pgai)[https://github.com/timescale/pgai?tab=readme-ov-file#use-a-timescale-cloud-service]: `CREATE EXTENSION IF NOT EXISTS ai CASCADE;` (also installs `pgvector` and `plpython3`)
+     * [pgai](https://github.com/timescale/pgai?tab=readme-ov-file#use-a-timescale-cloud-service): `CREATE EXTENSION IF NOT EXISTS ai CASCADE;` (also installs `pgvector` and `plpython3`)
 
 
  
