@@ -5,7 +5,7 @@ This repository contains an example project for building a private Retrieval-Aug
 ## Prerequisites
 
  * Docker
- * Python
+ * Python, psycopg
  * Ollama: https://github.com/ollama/ollama
  * PostgreSQL: https://docs.timescale.com/self-hosted/latest/install/installation-docker/
     * pgai: https://github.com/timescale/pgai
