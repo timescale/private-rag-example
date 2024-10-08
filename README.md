@@ -1,5 +1,7 @@
 # Private RAG Example
 
+[Watch the video tutorial here](https://youtu.be/-ikCYKcPoqU)
+
 This repository contains an example project for building a private Retrieval-Augmented Generation (RAG) application using Llama3.2, Ollama, and PostgreSQL. It demonstrates how to set up a RAG pipeline that does not rely on external API calls, ensuring that sensitive data remains within your infrastructure.
 
 ## Prerequisites
