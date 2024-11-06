@@ -15,7 +15,7 @@ This repository contains an example project for building a private Retrieval-Aug
 
 * Create a network through which the Ollama and PostgreSQL containers will interact:
 
-  `docker network docker network create rag-net`
+  `docker network create rag-net`
 
 * [Ollama](https://hub.docker.com/r/ollama/ollama) docker container: (Note: [`--network`](https://docs.docker.com/engine/network/) tag to make sure that the container runs on the network defined)
 
